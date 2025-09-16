@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.kursach.Controllers.Lab1Controller">
+
+    <top>
+        <MenuBar>
+            <Menu text="Файл">
+                <MenuItem text="Очистить вывод" onAction="#handleClearOutput"/>
+                <SeparatorMenuItem/>
+            </Menu>
+            <Menu text="Справка">
+                <items>
+                    <MenuItem text="О программе" onAction="#handleAbout"/>
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox fx:id="mainContainer" spacing="20" style="-fx-padding: 20;">
+            <Label text="Управление перемещением героя" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+            <GridPane fx:id="controlPanel" hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="100"/>
+                    <ColumnConstraints prefWidth="200"/>
+                    <ColumnConstraints prefWidth="100"/>
+                    <ColumnConstraints prefWidth="200"/>
+                </columnConstraints>
+
+                <rowConstraints>
+                    <RowConstraints prefHeight="35"/>
+                    <RowConstraints prefHeight="35"/>
+                    <RowConstraints prefHeight="35"/>
+                </rowConstraints>
+
+                <Label text="Способ перемещения:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="movementComboBox" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Начальная точка:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="startField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Конечная точка:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <TextField fx:id="endField" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                <Button fx:id="moveButton" text="Переместиться" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+                <Button fx:id="autoDemoButton" text="Автодемонстрация" GridPane.rowIndex="2" GridPane.columnIndex="2" GridPane.columnSpan="2"/>
+            </GridPane>
+
+            <Label text="Журнал действий:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+            <TextArea fx:id="outputArea" prefHeight="400" prefWidth="800"/>
+
+            <Label fx:id="statusLabel" text="Готов к работе" style="-fx-font-size: 12px; -fx-text-fill: #666;"/>
+
+            <Button fx:id="backToMenuButton" text="Назад в меню" onAction="#handleBackToMenu" />
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -10,7 +10,12 @@ module com.example.kursach {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires javafx.graphics;
+    requires java.desktop;
+    requires javafx.base;
 
     opens com.example.kursach to javafx.fxml;
     exports com.example.kursach;
+    exports com.example.kursach.Controllers;
+    opens com.example.kursach.Controllers to javafx.fxml;
 }
