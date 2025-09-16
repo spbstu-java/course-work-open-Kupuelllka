@@ -1,0 +1,50 @@
+hello|привет
+world|мир
+good morning|доброе утро
+good evening|добрый вечер
+good night|спокойной ночи
+how are you|как дела
+thank you|спасибо
+please|пожалуйста
+yes|да
+no|нет
+computer|компьютер
+programming|программирование
+java|джава
+translate|переводить
+text|текст
+language|язык
+dictionary|словарь
+word|слово
+sentence|предложение
+book|книга
+school|школа
+student|студент
+teacher|учитель
+work|работа
+home|дом
+family|семья
+friend|друг
+time|время
+day|день
+night|ночь
+week|неделя
+month|месяц
+year|год
+big|большой
+small|маленький
+good|хороший
+bad|плохой
+new|новый
+old|старый
+young|молодой
+beautiful|красивый
+happy|счастливый
+sad|грустный
+love|любовь
+life|жизнь
+water|вода
+food|еда
+money|деньги
+city|город
+country|страна

@@ -57,7 +57,8 @@
 
             <Label fx:id="statusLabel" text="Готов к работе" style="-fx-font-size: 12px; -fx-text-fill: #666;"/>
 
-            <Button fx:id="backToMenuButton" text="Назад в меню" onAction="#handleBackToMenu" />
+            <Button fx:id="backToMenuButton" text="Назад в меню" onAction="#handleBackToMenu" style="-fx-font-size: 14px; -fx-background-color: #ff4444; -fx-text-fill: white;"
+                    maxWidth="200" minHeight="35"/>
         </VBox>
     </center>
 

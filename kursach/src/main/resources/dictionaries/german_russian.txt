@@ -1,0 +1,50 @@
+hallo|привет
+welt|мир
+guten morgen|доброе утро
+guten abend|добрый вечер
+gute nacht|спокойной ночи
+wie geht es dir|как дела
+danke|спасибо
+bitte|пожалуйста
+ja|да
+nein|нет
+computer|компьютер
+programmierung|программирование
+java|джава
+übersetzen|переводить
+text|текст
+sprache|язык
+wörterbuch|словарь
+wort|слово
+satz|предложение
+buch|книга
+schule|школа
+student|студент
+lehrer|учитель
+arbeit|работа
+haus|дом
+familie|семья
+freund|друг
+zeit|время
+tag|день
+nacht|ночь
+woche|неделя
+monat|месяц
+jahr|год
+groß|большой
+klein|маленький
+gut|хороший
+schlecht|плохой
+neu|новый
+alt|старый
+jung|молодой
+schön|красивый
+glücklich|счастливый
+traurig|грустный
+liebe|любовь
+leben|жизнь
+wasser|вода
+essen|еда
+geld|деньги
+stadt|город
+land|страна

@@ -57,7 +57,46 @@ public class MainMenuController {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void openLab3(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("lab3.fxml"));
+            Parent root = fxmlLoader.load();
 
+            Lab3Controller controller = (Lab3Controller) fxmlLoader.getController();
+
+            Stage stage = new Stage();
+            stage.setTitle("Лабораторная работа 3 - Переводчик");
+            stage.setScene(new Scene(root, 900, 700));
+            stage.show();
+
+            // Закрываем меню (опционально)
+            closeCurrentWindow(event);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void openLab4(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("lab4.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Lab4Controller controller = (Lab4Controller) fxmlLoader.getController();
+
+            Stage stage = new Stage();
+            stage.setTitle("Лабораторная работа 4 - Stream API операции");
+            stage.setScene(new Scene(root, 900, 700));
+            stage.show();
+
+            // Закрываем меню (опционально)
+            closeCurrentWindow(event);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     private void handleExit(ActionEvent event) {
         closeCurrentWindow(event);

@@ -95,5 +95,6 @@
     <Label text="Журнал тренировок:" style="-fx-font-weight: bold;"/>
     <TextArea fx:id="outputArea" prefHeight="200" prefWidth="600"
               style="-fx-font-family: 'Monospaced'; -fx-font-size: 12px;"/>
-
+    <Button fx:id="backToMenuButton" text="Назад в меню" onAction="#handleBackToMenu" style="-fx-font-size: 14px; -fx-background-color: #ff4444; -fx-text-fill: white;"
+            maxWidth="200" minHeight="35"/>
 </VBox>

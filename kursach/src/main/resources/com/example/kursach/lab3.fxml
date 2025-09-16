@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.kursach.Controllers.Lab3Controller" spacing="10"
+      style="-fx-padding: 20; -fx-background-color: #f0f0f0;">
+
+<Label text="Переводчик текста" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+<HBox spacing="10" alignment="CENTER_LEFT">
+<Label text="Выберите словарь:"/>
+<ComboBox fx:id="dictionaryComboBox" prefWidth="200"/>
+<Button text="Загрузить словарь" onAction="#loadDictionary"/>
+<Label fx:id="dictionaryStatusLabel" text="Словарь не загружен"/>
+</HBox>
+
+<Separator/>
+
+<Label text="Введите текст для перевода:"/>
+<TextArea fx:id="inputTextArea" prefRowCount="4" wrapText="true"/>
+
+<HBox spacing="10" alignment="CENTER_RIGHT">
+<Button text="Очистить" onAction="#clearText"/>
+<Button text="Перевести" onAction="#translateText" defaultButton="true"
+        style="-fx-font-weight: bold;"/>
+</HBox>
+
+<Label text="Результат перевода:"/>
+<TextArea fx:id="outputTextArea" prefRowCount="4" wrapText="true" editable="false"
+          style="-fx-background-color: #f0f0f0;"/>
+
+<HBox spacing="10" alignment="CENTER">
+<Button text="Интерактивный режим" onAction="#startInteractiveMode"/>
+<Button text="Проверить слово" onAction="#checkWord"/>
+</HBox>
+
+<Label fx:id="statusLabel" text="Готов к работе" style="-fx-text-fill: green;"/>
+    <Button fx:id="backToMenuButton" text="Назад в меню" onAction="#handleBackToMenu" style="-fx-font-size: 14px; -fx-background-color: #ff4444; -fx-text-fill: white;"
+            maxWidth="200" minHeight="35"/>
+        </VBox>
+

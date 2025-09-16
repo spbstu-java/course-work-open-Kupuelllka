@@ -13,6 +13,7 @@ module com.example.kursach {
     requires javafx.graphics;
     requires java.desktop;
     requires javafx.base;
+    requires java.logging;
 
     opens com.example.kursach to javafx.fxml;
     exports com.example.kursach;
