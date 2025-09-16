@@ -42,16 +42,14 @@
 
     <VBox spacing="5">
         <Label text="Примеры использования:" style="-fx-font-weight: bold;"/>
-        <TextArea editable="false" prefHeight="100" prefWidth="600"
-                  style="-fx-font-family: 'Monospaced'; -fx-font-size: 11px;">
-            <![CDATA[
-                    Среднее значение чисел: 1 2 3 4 5
-                    Строки в верхний регистр: apple banana cherry
-                    Квадраты уникальных элементов: 1 2 2 3 4 4 5
-                    Последний элемент: first second third
-                    Сумма четных чисел: 1 2 3 4 5 6
-                    Строки в Map: apple banana cherry date
-        ]]>
+        <TextArea editable="false" prefHeight="200" prefWidth="600"
+                  style="-fx-font-family: 'Monospaced'; -fx-font-size: 11px;" text="${'
+                  Среднее значение чисел: 1 2 3 4 5 \n
+                  Строки в верхний регистр: apple banana cherry \n
+                  Квадраты уникальных элементов: 1 2 2 3 4 4 5 \n
+                  Последний элемент: first second third\n
+                  Сумма четных чисел: 1 2 3 4 5 6\n
+                  Cтроки в Map: apple banana cherry date\n'}">
         </TextArea>
     </VBox>
     <Button fx:id="backToMenuButton" text="Назад в меню" onAction="#handleBackToMenu"  style="-fx-font-size: 14px; -fx-background-color: #ff4444; -fx-text-fill: white;"

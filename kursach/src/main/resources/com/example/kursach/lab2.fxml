@@ -7,7 +7,7 @@
       fx:controller="com.example.kursach.Controllers.Lab2Controller" spacing="10"
       style="-fx-padding: 20; -fx-background-color: #f0f0f0;">
 
-    <Label text="🏋️‍♂️ Тренировка Героя 🏋️‍♂️" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <Label text="Тренировка Героя" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
 
     <!-- Создание героя -->
     <HBox spacing="10" alignment="CENTER_LEFT">
