@@ -9,7 +9,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import com.example.kursach.Classes.Hero.Hero;
 import com.example.kursach.Classes.Movement.*;
@@ -20,7 +19,6 @@ import java.util.ResourceBundle;
 
 public class Lab1Controller implements Initializable {
 
-    @FXML private VBox mainContainer;
     @FXML private ComboBox<String> movementComboBox;
     @FXML private TextField startField;
     @FXML private TextField endField;
@@ -125,7 +123,7 @@ public class Lab1Controller implements Initializable {
     @FXML
     private void handleAbout() {
         showAlert("О программе",
-                "Курсовая работа - Паттерн 'Стратегия'\n\n" +
+                "Курсовая работа - Паттерн 'Стратегия'\n" +
                         "Реализация различных способов перемещения героя");
     }
 
@@ -170,14 +168,5 @@ public class Lab1Controller implements Initializable {
             System.out.println("Ошибка загрузки: " + e.getMessage());
             e.printStackTrace();
         }
-    }
-
-    private void closeCurrentWindow(ActionEvent event) {
-        Node source = (Node) event.getSource();
-        Stage stage = (Stage) source.getScene().getWindow();
-        stage.close();
-    }
-    public void setPrimaryStage(Stage primaryStage) {
-        // Для дополнительных операций
     }
 }

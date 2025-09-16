@@ -12,6 +12,7 @@
         </font>
     </Label>
     <Button fx:id="lab1Button" text="Лабораторная работа 1 - Стратегия" onAction="#openLab1" style="-fx-font-size: 16px; -fx-padding: 10 20;" />
+    <Button fx:id="lab2Button" text="Лабораторная работа 2 - Тренировка Героя" onAction="#openLab2" style="-fx-font-size: 16px; -fx-padding: 10 20;" />
     <!-- Добавьте кнопки для других лабораторных работ здесь -->
     <Button fx:id="exitButton" text="Выход" onAction="#handleExit" style="-fx-font-size: 14px; -fx-padding: 8 16;" />
 </VBox>
