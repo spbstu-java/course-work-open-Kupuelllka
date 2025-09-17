@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.kursach.Controllers.Lab2Controller" spacing="10"
+      style="-fx-padding: 20; -fx-background-color: #f0f0f0;">
+
+    <Label text="Тренировка Героя" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <!-- Создание героя -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Имя героя:"/>
+        <TextField fx:id="heroNameField" promptText="Введите имя" prefWidth="150"/>
+        <Button fx:id="createHeroButton" text="Создать героя" onAction="#createHero"/>
+        <Button text="Сбросить" onAction="#resetHero" style="-fx-background-color: #ff6b6b;"/>
+    </HBox>
+
+    <Separator/>
+
+    <!-- Статистика -->
+    <Label fx:id="heroStatsLabel" text="Статистика героя" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+
+    <!-- Панель тренировок -->
+    <VBox fx:id="trainingPanel" spacing="15">
+
+        <!-- Силовые тренировки -->
+        <TitledPane text="💪 Силовые тренировки" animated="false">
+            <VBox spacing="10" style="-fx-padding: 10;">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Отжимания (кол-во):"/>
+                    <TextField fx:id="pushUpsCountField" promptText="10" prefWidth="80"/>
+                    <Button fx:id="pushUpsButton" text="Отжиматься!" onAction="#doPushUps"/>
+                </HBox>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Вес (кг):"/>
+                    <TextField fx:id="weightField" promptText="50.0" prefWidth="80"/>
+                    <Label text="Тип оружия:"/>
+                    <TextField fx:id="weaponTypeField" promptText="меч" prefWidth="100"/>
+                    <Button fx:id="liftWeightsButton" text="Поднимать вес!" onAction="#liftWeights"/>
+                </HBox>
+            </VBox>
+        </TitledPane>
+
+        <!-- Ловкость -->
+        <TitledPane text="🏹 Тренировка ловкости" animated="false">
+            <VBox spacing="10" style="-fx-padding: 10;">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Стрелы (кол-во):"/>
+                    <TextField fx:id="arrowsCountField" promptText="15" prefWidth="80"/>
+                    <Button fx:id="archeryButton" text="Стрелять из лука!" onAction="#practiceArchery"/>
+                </HBox>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Дистанция (км):"/>
+                    <TextField fx:id="distanceField" promptText="10" prefWidth="80"/>
+                    <Label text="Скорость (км/ч):"/>
+                    <TextField fx:id="speedField" promptText="8" prefWidth="80"/>
+                    <Button fx:id="runMarathonButton" text="Бежать марафон!" onAction="#runMarathon"/>
+                </HBox>
+            </VBox>
+        </TitledPane>
+
+        <!-- Интеллект -->
+        <TitledPane text="📚 Развитие интеллекта" animated="false">
+            <VBox spacing="10" style="-fx-padding: 10;">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Заклинание:"/>
+                    <TextField fx:id="spellNameField" promptText="Огненный шар" prefWidth="120"/>
+                    <Label text="Сложность:"/>
+                    <TextField fx:id="spellComplexityField" promptText="3" prefWidth="60"/>
+                    <Button fx:id="studySpellButton" text="Изучать!" onAction="#studySpell"/>
+                </HBox>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <CheckBox fx:id="deepMeditationCheckbox" text="Глубокая медитация"/>
+                    <Button fx:id="meditateButton" text="Медитировать" onAction="#meditate"/>
+                </HBox>
+            </VBox>
+        </TitledPane>
+
+        <!-- Отдых и управление -->
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="restButton" text="Отдохнуть" onAction="#doRest"
+                    style="-fx-background-color: #4ecdc4; -fx-text-fill: white;"/>
+            <Button fx:id="showStatsButton" text="Показать статистику" onAction="#showStats"/>
+            <Button fx:id="checkBattleReadyButton" text="Проверить готовность" onAction="#checkBattleReady"
+                    style="-fx-background-color: #45b7d1; -fx-text-fill: white;"/>
+            <Button text="Очистить вывод" onAction="#clearOutput"/>
+        </HBox>
+    </VBox>
+
+    <Separator/>
+
+    <!-- Вывод информации -->
+    <Label text="Журнал тренировок:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="outputArea" prefHeight="200" prefWidth="600"
+              style="-fx-font-family: 'Monospaced'; -fx-font-size: 12px;"/>
+    <Button fx:id="backToMenuButton" text="Назад в меню" onAction="#handleBackToMenu" style="-fx-font-size: 14px; -fx-background-color: #ff4444; -fx-text-fill: white;"
+            maxWidth="200" minHeight="35"/>
+</VBox>

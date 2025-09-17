@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.kursach.Controllers.Lab4Controller" spacing="10"
+      style="-fx-padding: 20; -fx-background-color: #f0f0f0;">
+
+
+    <Label text="Лабораторная работа 4: Stream API операции"
+           style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Выберите операцию:" style="-fx-font-weight: bold;"/>
+        <ComboBox fx:id="operationComboBox" prefWidth="250"/>
+    </HBox>
+
+    <VBox spacing="5">
+        <Label text="Входные данные:" style="-fx-font-weight: bold;"/>
+        <TextArea fx:id="inputTextArea" prefHeight="150" prefWidth="600"
+                  promptText="Введите данные здесь...
+Для чисел: через пробел или запятую (1 2 3 4 5)
+Для строк: каждую строку с новой строки"/>
+    </VBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="executeButton" text="Выполнить"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button fx:id="clearButton" text="Очистить"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+    </HBox>
+
+    <VBox fx:id="resultContainer" spacing="5">
+        <Label text="Результат:" style="-fx-font-weight: bold;"/>
+        <TextArea fx:id="outputTextArea" prefHeight="200" prefWidth="600"
+                  editable="false" style="-fx-font-family: 'Monospaced';"/>
+    </VBox>
+
+    <Label fx:id="resultLabel" style="-fx-font-weight: bold; -fx-padding: 5 0 0 0;"/>
+
+    <VBox spacing="5">
+        <Label text="Примеры использования:" style="-fx-font-weight: bold;"/>
+        <TextArea editable="false" prefHeight="200" prefWidth="600"
+                  style="-fx-font-family: 'Monospaced'; -fx-font-size: 11px;" text="${'
+                  Среднее значение чисел: 1 2 3 4 5 \n
+                  Строки в верхний регистр: apple banana cherry \n
+                  Квадраты уникальных элементов: 1 2 2 3 4 4 5 \n
+                  Последний элемент: first second third\n
+                  Сумма четных чисел: 1 2 3 4 5 6\n
+                  Cтроки в Map: apple banana cherry date\n'}">
+        </TextArea>
+    </VBox>
+    <Button fx:id="backToMenuButton" text="Назад в меню" onAction="#handleBackToMenu"  style="-fx-font-size: 14px; -fx-background-color: #ff4444; -fx-text-fill: white;"
+            maxWidth="200" minHeight="35"/>
+</VBox>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursach.Controllers.MainMenuController">
+    <padding>
+        <Insets top="40" right="20" bottom="40" left="20"/>
+    </padding>
+
+    <Label text="Выберите лабораторную работу" textAlignment="CENTER" wrapText="true">
+        <font>
+            <Font size="24.0" />
+        </font>
+        <padding>
+            <Insets bottom="20"/>
+        </padding>
+    </Label>
+
+    <VBox alignment="CENTER" spacing="15" prefWidth="400">
+        <Button fx:id="lab1Button" text="Лабораторная работа 1 - Стратегия" onAction="#openLab1"
+                style="-fx-font-size: 14px;" maxWidth="Infinity" minHeight="40" />
+
+        <Button fx:id="lab2Button" text="Лабораторная работа 2 - Тренировка Героя" onAction="#openLab2"
+                style="-fx-font-size: 14px;" maxWidth="Infinity" minHeight="40" />
+
+        <Button fx:id="lab3Button" text="Лабораторная работа 3 - Переводчик" onAction="#openLab3"
+                style="-fx-font-size: 14px;" maxWidth="Infinity" minHeight="40" />
+
+        <Button fx:id="lab4Button" text="Лабораторная работа 4 - Stream API Операции" onAction="#openLab4"
+                style="-fx-font-size: 14px;" maxWidth="Infinity" minHeight="40" />
+
+        <!-- Добавьте кнопки для других лабораторных работ здесь -->
+
+        <Button fx:id="exitButton" text="Выход" onAction="#handleExit"
+                style="-fx-font-size: 14px; -fx-background-color: #ff4444; -fx-text-fill: white;"
+                maxWidth="200" minHeight="35">
+            <padding>
+                <Insets left="20" right="20"/>
+            </padding>
+        </Button>
+    </VBox>
+</VBox>
